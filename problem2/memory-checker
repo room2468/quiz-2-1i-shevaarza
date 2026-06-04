@@ -1,4 +1,4 @@
-\#!/bin/env bash
+#!/bin/env bash
 
 # HINT: You can test the result of this script using the following command:
 # printf "8000\n2000\n" | ./memory-checker
