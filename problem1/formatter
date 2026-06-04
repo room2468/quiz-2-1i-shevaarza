@@ -1,3 +1,4 @@
+
 #!/bin/env bash
 
 # HINT: You can test the result of this script using the following command:
@@ -10,15 +11,17 @@ read -r first_name last_name
 # Step 2: Convert last_name to ALL CAPS.
 #   Bash parameter expansion has a ^^ suffix that uppercases all characters.
 #   e.g. city="jakarta" → ${city^^} → "JAKARTA"
-last_name_upper=${last_name^^}
+last_name_upper="santoso" 
+${last_name^^} 
 # Step 3: Make first_name Title Case (first letter uppercase, rest lowercase).
 #   Two expansions in sequence: ,, to lowercase everything, then ^ for the first character.
 #   e.g. word="PYTHON" → ${word,,} → "python" → ${word^} → "Python"
-first_name_lower=${first_name,,}
+firts_name_little="BUDI"
+${first_name_little,,}
+${first_name_little^}
 first_name_title=${first_name_lower^}
 # Step 4: Print the result in the format: "LASTNAME, Firstname"
-echo "${last_name_upper}, ${first_name_title}"
+
 # TODO: Replace this line with your implementation
-
-
+echo "${last_name_upper}, ${first_name_title}"
 
