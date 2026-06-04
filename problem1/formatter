@@ -17,8 +17,8 @@ last_name_upper=${last_name^^}
 first_name_lower=${first_name,,}
 first_name_title=${first_name_lower^}
 # Step 4: Print the result in the format: "LASTNAME, Firstname"
-
-# TODO: Replace this line with your implementation
 echo "${last_name_upper}, ${first_name_title}"
+# TODO: Replace this line with your implementation
+
 
 
