@@ -1,3 +1,4 @@
+  GNU nano 7.2                                                           memory-checker *
 \#!/bin/env bash
 
 # HINT: You can test the result of this script using the following command:
@@ -11,8 +12,10 @@ read -r used_mb
 # Step 2: Calculate free MB using bash arithmetic expansion $(( )) with subtraction.
 free_mb=$(( total_mb - used_mb ))
 # Step 3: Calculate usage percentage using $(( )) with multiplication and division.
+#   Bash performs integer division by default — no decimal needed.
 usage=$(( used_mb * 100 / total_mb ))
 # Step 4: Determine status using if/elif/else with arithmetic conditions (( )).
+#   Check the 90% threshold first, then 70%, then fall through to Normal.
 if (( usage >= 90 )); then
     status="Critical"
 elif (( usage >= 70 )); then
