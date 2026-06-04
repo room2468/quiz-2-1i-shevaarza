@@ -8,7 +8,6 @@
 #   First line = total RAM in MB, second line = used RAM in MB.
 read -r total_mb
 read -r used_mb
-
 # Step 2: Calculate free MB using bash arithmetic expansion $(( )) with subtraction.
 free_mb=$(( total_mb - used_mb ))
 # Step 3: Calculate usage percentage using $(( )) with multiplication and division.
@@ -23,7 +22,6 @@ elif (( usage >= 70 )); then
 else
     status="Normal"
 fi
-
 # Step 5: Print the three output lines using echo, embedding variables directly.
 echo "Free: $free_mb MB"
 echo "Usage: $usage%"
